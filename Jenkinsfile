@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
 				bat 'mvn clean package'
-				bat label: '', script: 'copy C:\\Program Files (x86)\\Jenkins\\workspace\\tomcat_pipleline_deployment\\target\\*.war C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps'
+				bat label: '', script: 'copy C:\\Program Files (x86)\\Jenkins\\workspace\\tomcat_pipleline_deployment\\target\\*.war C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps\\'
             }
         }
     }
