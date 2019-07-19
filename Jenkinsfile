@@ -5,7 +5,7 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'Compiling..'
-				bat 'mvn clean compile'
+				bat 'mvn compile'
             }
         }
         stage('Test') {
@@ -16,7 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-				bat 'mvn clean package'
+				bat 'mvn package'
 				bat label: '', script: 'copy \\target\\SampleTwo-0.0.1-SNAPSHOT.war C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps\\'
             }
         }
