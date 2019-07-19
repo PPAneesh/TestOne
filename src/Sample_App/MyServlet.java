@@ -30,7 +30,7 @@ public class MyServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
 		out.print("Hi this is servlet!!!!!!!");
-		
+		out.print("Hi this is servlet!!!!!!!123");
 	}
 
 	/**
